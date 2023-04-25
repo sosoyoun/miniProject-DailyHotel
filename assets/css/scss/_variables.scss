@@ -1,0 +1,42 @@
+/**********************************************************************************************************
+// 설명 : 반응형 프로젝트에 적용되는 변수에 대한 정의
+***********************************************************************************************************/
+
+// font size
+$font-blarge: 2.5rem; // 40px
+$font-xxxlarge: 1.875rem; // 30px
+$font-xxlarge: 1.625rem; // 26px
+$font-xlarge: 1.563rem; // 25px
+$font-large: 1.25rem; // 20px
+$font-medium: 1.125rem; // 18px
+$font-default: 1.0625rem; //17px
+$font-minSmall: 1rem; // 16px
+$font-small: 0.9375rem; // 15px
+$font-xsmall: 0.875rem; // 14px
+$font-xxsmall: 0.8125rem; // 13px
+$font-tiny: 0.75rem; // 12px
+$font-xtiny: 0.6875rem; // 11px
+
+// 굵기 명시
+$weight-bold: 600;
+$weight-normal: 400;
+$weight-sin: 300;
+
+// 컬러는 figma 기준.
+// 비슷한 컬러는 숫자를 붙인다.
+$color-white: white;
+$red: #fa5252;
+
+$color-overlay: rgba(0, 0, 0, 0.7); // 오버레이 컬러
+$color-overlay1: rgba(0, 0, 0, 0.9); // 오버레이 컬러
+
+// 큰 범주의 z-index는 변수화한다. 필요시 +1 하여 사용한다.
+// 목록 참조: https://mui.com/customization/z-index/
+$z-index-app-bar: 9;
+$z-index-drawer: 99;
+$z-index-modal: 999;
+$z-index-snackbar: 9999;
+$z-index-tooltip: 99999;
+
+// 여백 사이즈
+$sizes: 0.625rem, 1.25rem, 2.5rem; // 10px, 20px, 40px

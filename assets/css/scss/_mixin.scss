@@ -1,0 +1,133 @@
+/********************************************************************************************
+// 공통적인 베이스 반응형 scss 영역
+// - 768px & 768px - 1023px & 1024px -
+// @mixin으로 공통적인 재사용 모듈화를 작업하여 적용합니다.
+********************************************************************************************/
+@import './variables';
+
+/*반응형 화면 크기*/
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+@mixin tablet {
+    @media (min-width: #{$mobile+1}) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size) {
+    $calculated: 32px * $size;
+    width: $calculated;
+    height: $calculated;
+}
+
+/** @mixin 모듈화 **/
+// position arguments by unified size
+@mixin position-args-all($size) {
+    top: $size;
+    bottom: $size;
+    left: $size;
+    right: $size;
+}
+
+// position args 가로/세로
+@mixin position-args-symmetric($vertical, $horizontal) {
+    top: $vertical;
+    bottom: $vertical;
+    left: $horizontal;
+    right: $horizontal;
+}
+
+// position args 시계방향 정의
+@mixin position-args-ltrb($left, $top, $right, $bottom) {
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+}
+
+// opacity로 사용자에게 반응.
+@mixin touchable {
+    transition: opacity 0.15s ease;
+
+    &:not(:disabled):hover {
+        opacity: 0.9;
+    }
+
+    &:not(:disabled):active {
+        opacity: 0.6;
+    }
+}
+
+/* 스크롤바 SCSS*/
+@mixin customScrollBar($width: 6px, $color: rgb(206, 206, 206), $radius: 50px) {
+    /* width */
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+
+    // /* Track */
+    // &::-webkit-scrollbar-track:vertical {
+    //     background: $color-white;
+    // }
+
+    // /* Handle */
+    // &::-webkit-scrollbar-thumb:vertical {
+    //     background: $color;
+    //     border-radius: $radius;
+    // }
+}
+
+/* 블럭부모 요소의 자식요소 레이아웃 정렬 flex */
+@mixin flexBetween() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexEnd() {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flexAlignEnd() {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@mixin flexAround() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexStart() {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

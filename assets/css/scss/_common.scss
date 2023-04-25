@@ -1,7 +1,10 @@
-/**
-* 프로젝트 공통 스타일링
-* + js 스타일링 공통
-**/
+/**********************************************************************************************************
+// 프로젝트 공통 스타일링
+// +js 스타일링 공통
+***********************************************************************************************************/
+
+@import 'variables.scss';
+@import 'mixin.scss';
 
 /*fonts.css*/
 @font-face {
@@ -29,8 +32,80 @@
     font-family: 'Pretendard-Regular';
     src: url('./fonts/Pretendard-Regular.woff');
 }
-
-/* 폰트 적용 */
-body {
-    font-family: 'Pretendard-Regular';
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @include customScrollBar();
 }
+
+body {
+    
+    font-family: 'Pretendard-Regular';
+
+    #headerLayout {
+        width: 100vw;
+        height: 10vh;
+        background: #0f0;
+    }
+
+    #containerLayout {
+        width: 100vw;
+        min-height: 90vh;
+        margin: auto;
+
+        .container {
+            width: 48.750rem;
+            margin: auto;
+            background-color: aqua;
+        }
+
+        footer.footer {
+            width: 48.750rem;
+            height: 10rem;
+            margin: auto;
+            background-color: aquamarine;
+        }
+    }
+}
+
+@include mobile {
+    body{
+        #headerLayout {
+            background: #ff00ff;
+        }
+        #containerLayout {
+            .container, 
+            footer.footer {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include tablet {
+    body {
+        #headerLayout {
+            background: #000;
+        }
+        #containerLayout {
+            .container,
+            footer.footer {
+                width: 90%;
+            }
+        }
+    }
+    
+}
+
+// .box {
+//     background: red;
+//     cursor: pointer;
+//     transition: all 0.3s ease-in;
+
+//     &.red {
+//         background: $red;
+//         /*변수파일에 있는 red변수 사용*/
+//         @include square(5);
+//         /* 5를 넣으므로 넓이, 높이를 mixin suqare에서 계산해줌 */
+//     }
+// }

@@ -1,7 +1,8 @@
-/**
-* 글로벌 초기세팅 
-* 브라우저 세팅 초기화
-**/
+/**********************************************************************************************************
+// 글로벌 초기세팅
+// 브라우저 세팅 초기화
+***********************************************************************************************************/
+
 
 /*
    http://meyerweb.com/eric/tools/css/reset/
@@ -96,13 +97,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }

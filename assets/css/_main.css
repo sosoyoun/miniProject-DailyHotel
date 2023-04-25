@@ -1,6 +1,16 @@
 @charset "UTF-8";
-/**
-* 메인페이지 스타일링
-**/
+/**********************************************************************************************************
+// 메인페이지 스타일링
+***********************************************************************************************************/
+html {
+  background-color: black;
+}
+
+#containerLayout {
+  background-color: antiquewhite;
+}
+#containerLayout div {
+  min-height: 30rem;
+}
 
 /*# sourceMappingURL=_main.css.map */
