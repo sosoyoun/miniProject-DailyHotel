@@ -77,22 +77,22 @@ $desktop: 1024px;
 }
 
 /* 스크롤바 SCSS*/
-@mixin customScrollBar($width: 6px, $color: rgb(206, 206, 206), $radius: 50px) {
+@mixin customScrollBar($width: 8px, $color: rgb(206, 206, 206), $radius: 50px) {
     /* width */
     &::-webkit-scrollbar {
         width: $width;
     }
 
-    // /* Track */
-    // &::-webkit-scrollbar-track:vertical {
-    //     background: $color-white;
-    // }
+    /* Track */
+    &::-webkit-scrollbar-track:vertical {
+        background: $color-white;
+    }
 
-    // /* Handle */
-    // &::-webkit-scrollbar-thumb:vertical {
-    //     background: $color;
-    //     border-radius: $radius;
-    // }
+    /* Handle */
+    &::-webkit-scrollbar-thumb:vertical {
+        background: $color;
+        border-radius: $radius;
+    }
 }
 
 /* 블럭부모 요소의 자식요소 레이아웃 정렬 flex */

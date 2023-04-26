@@ -19,8 +19,29 @@
 
 <body>
 </body>
+<!-- 공통 헤더 영역 -->
 <header id="headerLayout">
-    헤더
+    <nav>
+        <a class="logo" href="#"><img src="" alt="로고"></a>
+        <div class="searchForm">
+            <div class="select">
+                <span>국내숙소</span>
+                <ul>
+                    <li value="1">국내숙소</li>
+                    <li value="2">레저</li>
+                </ul>
+            </div>
+            <label for="">
+                <input type="text" placeholder="검색어를 입력해 주세요.">
+                <img src="assets/images/search_icon.svg" alt="검색">
+            </label>
+        </div>
+        <ul class="more">
+            <li><a href="/login"><img src="assets/images/login_icon.svg" alt="로그인/회원가입" title="로그인/회원가입"></a></li>
+            <li><a href="/myPage"><img src="assets/images/person_icon.svg" alt="내페이지" title="내페이지"></a></li>
+            <li><a href="/more"><img src="assets/images/more_icon.svg" alt="더보기" title="더보기"></a></li>
+        </ul>
+    </nav>
 </header>
 <main id="containerLayout">
     <div class="container">
@@ -37,5 +58,14 @@
         푸터
     </footer>
 </main>
+<!-- 모바일 ~ 테블릿일때 보여지는 부분 -->
+<footer class="navigation">
+    <ul>
+        <li><a href="#"><img src="assets/images/home_icon.svg" alt="home"><span>홈</span></a></li>
+        <li><a href=""><img src="assets/images/note_icon.svg" alt="예약/내역"><span>예약/내역</span></a></li>
+        <li><a href=""><img src="assets/images/person_icon.svg" alt="마이페이지"><span>마이페이지</span></a></li>
+        <li><a href=""><img src="assets/images/more_two_icon.svg" alt="더보기"><span>더보기</span></a></li>
+    </ul>
+</footer>
 
 </html>
